@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tituloCalculadora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LA CALCULADORA"
+            android:textAlignment="center"
+            android:textSize="100px"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/txtNum1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:hint="Introduce un numero"
+            android:textStyle="bold"
+            android:textSize="60px"
+            android:inputType="number"
+            android:layout_below="@id/tituloCalculadora"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/txtNum2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:hint="Introduce un numero"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:textSize="60px"
+            android:layout_below="@id/txtNum1"
+            android:layout_marginBottom="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:orientation="horizontal"
+            android:layout_below="@id/txtNum2"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioSuma"
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sumar"/>
+
+            <RadioButton
+                android:id="@+id/radioResta"
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restar"/>
+
+            <RadioButton
+                android:id="@+id/radioMultiplicacion"
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multiplicar"/>
+
+            <RadioButton
+                android:id="@+id/radioDivision"
+                android:textSize="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dividir"/>
+        </RadioGroup>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:id="@+id/checkbox"
+            android:text="Resultado en Dialog"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/radioGroup"/>
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular Operacion"
+            android:onClick="CalcularOperacion"
+            android:layout_below="@id/checkbox"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50px"
+            android:layout_below="@id/btnCalcular"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
